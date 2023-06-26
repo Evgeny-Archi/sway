@@ -1,0 +1,230 @@
+@keyframes blink-warning {
+    70% {
+        color: @wm_icon_bg;
+    }
+
+    to {
+        color: @wm_icon_bg;
+        background-color: @warning_color;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+        color: @wm_icon_bg;
+    }
+
+    to {
+        color: @wm_icon_bg;
+        background-color: @error_color;
+    }
+}
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+    background: @theme_bg_color;
+    color: @theme_fg_color;
+    font-family: "Ubuntu", "Font Awesome 6 Free", "Font Awesome";
+    font-size: 14px;
+}
+
+#window {
+    margin-left: 10px;
+}
+
+window#waybar {
+    margin-left: 10px;
+    border-radius: 0;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces button {
+    /* To compensate for the top border and still have vertical centering */
+    /* padding: 0 0.5em;
+    margin: 4px 3px;
+    color: @wm_icon_bg; */
+    padding: 0 10px 2px 10px;
+    border-top: 2px solid transparent;
+    color: #888888;
+}
+
+#workspaces button.focused {
+    /* border-color: @theme_selected_bg_color;
+    color: @wm_icon_bg;
+    background-color: @theme_selected_bg_color; */
+    color: white;
+    border-color: #4c7899;
+    background-color: #285577;
+}
+
+#workspaces button.urgent {
+    /* border-color: @error_color;
+    color: @error_color; */
+    color: #c9545d;
+    border-color: #c9545d;
+}
+
+#mode {
+    background: @background_color;
+}
+
+#clock,
+#custom-playerctl,
+#custom-power,
+#custom-scratchpad,
+#custom-weather,
+#custom-wlsunset,
+#custom-clipboard,
+#custom-menu,
+#custom-dnd,
+#battery,
+#cpu,
+#language,
+#memory,
+#network,
+#bluetooth,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 5px;
+    /* background: @theme_selected_bg_color; */
+}
+
+#clock {
+    color: @theme_selected_fg_color;
+}
+
+#custom-weather {
+    color: @theme_selected_fg_color;
+}
+
+#custom-wlsunset {
+    color: @theme_selected_fg_color;
+}
+
+#custom-playerctl {
+    color: @theme_selected_fg_color;
+}
+
+#custom-power {
+    color: @theme_selected_fg_color;
+}
+
+#custom-scratchpad {
+    color: @theme_selected_fg_color;
+}
+
+#custom-clipboard {
+    color: @theme_selected_fg_color;
+}
+
+#custom-menu {
+    color: @theme_selected_fg_color;
+}
+
+#custom-dnd {
+    color: @theme_selected_fg_color;
+}
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: @theme_selected_fg_color;
+}
+
+#battery.warning {
+    color: @warning_color;
+}
+
+#battery.critical {
+    color: @error_color;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    color: @theme_selected_fg_color;
+}
+
+#language {
+    color: @theme_selected_fg_color;
+}
+
+#memory {
+    color: @theme_selected_fg_color;
+}
+
+#custom-gpu-usage {
+    color: @theme_selected_fg_color;
+}
+
+#network {
+    color: @theme_selected_fg_color;
+}
+
+#bluetooth {
+    color: @theme_selected_fg_color;
+}
+
+#bluetooth.disabled {
+    color: @wm_icon_bg;
+}
+
+#network.disconnected {
+    color: @wm_icon_bg
+}
+
+#pulseaudio {
+    color: @theme_selected_fg_color;
+}
+
+#pulseaudio.muted {
+    color: @wm_icon_bg;
+}
+
+#custom-wf-recorder {
+    color: @error_color;
+    padding-right: 10px;
+}
+
+#tray {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#idle_inhibitor {
+    background: @theme_selected_bg_color;
+}
+
+#idle_inhibitor.activated {
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
