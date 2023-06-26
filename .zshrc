@@ -2,9 +2,10 @@
 
 fpath+=($HOME/.zsh/typewritten)
 
-export TYPEWRITTEN_PROMPT_LAYOUT="pure"
+export TYPEWRITTEN_PROMPT_LAYOUT="oneline"
 export TYPEWRITTEN_ARROW_SYMBOL="➜"
 export TYPEWRITTEN_CURSOR="block"
+export TYPEWRITTEN_RELATIVE_PATH="home"
 export TYPEWRITTEN_COLORS="git_branch:#808080;current_directory:blue;symbol:#FF80BF;right_prompt_prefix:#808080"
 export TYPEWRITTEN_RIGHT_PROMPT_PREFIX_FUNCTION=(date +%H:%M:%S)
 
