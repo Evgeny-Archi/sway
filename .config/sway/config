@@ -29,3 +29,7 @@ include /etc/sway/config.d/*
 
 # user config
 include $HOME/.config/sway/config.d/*.conf
+
+bar {
+swaybar_command waybar
+}
