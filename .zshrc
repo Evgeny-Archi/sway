@@ -25,10 +25,12 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/git-aliases.zsh
 
+alias f="fzf-tmux -p | xargs nvim"
 alias ssh="kitty +kitten ssh"
 alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa --tree"
+alias n="nvim"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
